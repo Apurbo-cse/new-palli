@@ -37,21 +37,13 @@
                 </ul>
             </li>
 
-            <li>
-                <a href="{{ route ('admin.product.index') }}" class="waves-effect"><i class="mdi mdi-blogger"></i><span> Product </span></a>
-            </li>
-
-
+            
+            
+            <li><a href="{{ route ('admin.product-tag.index') }}" class="waves-effect"><i class="mdi mdi-blogger"></i><span> Product Tag </span></a></li>
+            <li><a href="{{ route ('admin.product.index') }}" class="waves-effect"><i class="mdi mdi-blogger"></i><span> Product </span></a></li>\
            
-            <li class="has_sub">
-                <a href="javascript:void(0);" class="waves-effect"><i class="ti-video-camera"></i> <span> Video </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
-                <ul class="list-unstyled">
-                    {{-- <li><a href="{{route('video.index')}}">Video List</a></li>
-                    <li><a href="{{route('video.create')}}">Create New Video</a></li> --}}
-                </ul>
-            </li>
+            
 
-            {{-- <li class=""><a href="{{route('admin.post.index')}}">Blog</a></li> --}}
             <li>
                 <a href="{{ route ('admin.post.index') }}" class="waves-effect"><i class="mdi mdi-blogger"></i><span> Blog </span></a>
             </li>
@@ -62,7 +54,6 @@
                 <ul class="list-unstyled">
                     <li><a href="{{ route ('admin.tag.index') }}">Tag List</a></li>
                     <li><a href="{{ route('admin.tag.create') }}">Create New Tag</a></li>
-                    {{-- {{ route('admin.category.index') }} --}}
                 </ul>
             </li>
 
@@ -71,7 +62,6 @@
                 <ul class="list-unstyled">
                     <li><a href="{{ route ('admin.slider.index') }}">Slider List</a></li>
                     <li><a href="{{ route('admin.slider.create') }}">Create New Slider</a></li>
-                    {{-- {{ route('admin.category.index') }} --}}
                 </ul>
             </li>
             

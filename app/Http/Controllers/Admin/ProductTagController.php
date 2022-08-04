@@ -110,6 +110,15 @@ class ProductTagController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $proTag = ProductTag::findOrFail($id);
+        if($proTag){
+            if(file_exists(($proTag->image))){
+                unlink($proTag->image);
+            }
+
+            $proTag->delete();
+            session()->flash('success', 'Slider deleted successfully');
+            return back();
+        }
     }
 }

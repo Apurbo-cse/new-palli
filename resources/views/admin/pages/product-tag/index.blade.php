@@ -57,8 +57,6 @@ Role Page - Admin Panel
 
                             <th class="text-center" >Title</th>
                             <th class="text-center" >Slug</th>
-                            <th class="text-center" >Description</th>
-                            <th class="text-center" style="width: 40%">Image</th>
                             <th class="text-center" >Status</th>
                             <th class="text-center" style="width: 12%">Actions</th>
                         </tr>
@@ -70,8 +68,6 @@ Role Page - Admin Panel
                             <td>{{ $loop->index+1 }}</td>
                             <td>{{$producttag->name}}</td>
                             <td>{{$producttag->slug}}</td>
-                            <td>{{$producttag->description}}</td>
-                                <td class="text-center"><img src="{{ asset($producttag->image) }}"  width="20%" alt=""></td>
                                 <td>
                                     @if ($producttag->status == 0)
                                         <a type="button" class="btn btn-danger waves-effect waves-light">Inactive</a>
