@@ -22,10 +22,10 @@ Role Page - Admin Panel
   <div class="row">
         <div class="col-sm-12">
             <div class="page-header-title">
-                <h4 class="pull-left page-title">Product</h4>
+                <h4 class="pull-left page-title">Product Tag</h4>
                 <ol class="breadcrumb pull-right">
                     <li><a href="">Dashboard</a></li>
-                    <li class="active">Product List List</li>
+                    <li class="active" href="{{route('admin.product-tag.create')}}">Product Tag List</li>
                 </ol>
                 <div class="clearfix"></div>
             </div>
@@ -34,7 +34,7 @@ Role Page - Admin Panel
 
     <div class="row m-b-15">
         <div class="col-sm-12">
-            <a class="btn btn-primary" href="{{route('admin.product.create')}}"><i class="fa fa-plus"></i> Create New Product</a>
+            <a class="btn btn-primary" href="{{route('admin.product-tag.create')}}"><i class="fa fa-plus"></i> Create New Product Tag</a>
         </div>
     </div> 
 
@@ -43,7 +43,7 @@ Role Page - Admin Panel
             <div class="panel panel-primary">
                 <div class="panel-heading text-end">
                     <h3 class="panel-title">
-                        <button class="btn btn-primary  mx-5"><a href="" class="text-white">All</a></button>
+                        <button class="btn btn-primary  mx-5"><a href="{{route('admin.product-tag.index')}}" class="text-white">All</a></button>
 
                     </h3>
                 </div>
@@ -57,7 +57,6 @@ Role Page - Admin Panel
 
                             <th class="text-center" >Title</th>
                             <th class="text-center" >Slug</th>
-                            <th class="text-center" >Parent Category</th>
                             <th class="text-center" >Description</th>
                             <th class="text-center" style="width: 40%">Image</th>
                             <th class="text-center" >Status</th>
@@ -66,11 +65,30 @@ Role Page - Admin Panel
                         </thead>
 
                         <tbody>
-
-                        <tr>
-                            <td>asdas</td>
-                        </tr>
-                       
+                        @foreach($product_tags as $producttag)
+                            <tr>
+                            <td>{{ $loop->index+1 }}</td>
+                            <td>{{$producttag->name}}</td>
+                            <td>{{$producttag->slug}}</td>
+                            <td>{{$producttag->description}}</td>
+                                <td class="text-center"><img src="{{ asset($producttag->image) }}"  width="20%" alt=""></td>
+                                <td>
+                                    @if ($producttag->status == 0)
+                                        <a type="button" class="btn btn-danger waves-effect waves-light">Inactive</a>
+                                    @else
+                                    <a type="button" class="btn btn-success waves-effect waves-light">Active</a>
+                                    @endif
+                                </td>
+                                <td class="d-flex">
+                                    <a class="btn btn-info d-inline-block" href="{{ route('admin.product-tag.edit',$producttag->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                    <form class="d-inline-block pull-right" method="post" action="{{ route('admin.product-tag.destroy',$producttag->id) }}">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="btn btn-danger" onclick="return confirm('Are you confirm to delete?')"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
 

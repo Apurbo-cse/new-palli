@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdvisorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SubCategoryController;
+use App\Http\Controllers\Admin\ProductTagController;
 use App\Http\Controllers\Admin\ProductContontroller;
 
 use App\Http\Controllers\Admin\DeveloperController;
@@ -43,6 +44,7 @@ Route::group(['prefix' => 'dashboard/', 'as' => 'admin.', 'middleware' => ['auth
 
     Route::resource('category', CategoryController::class);
     Route::resource('sub-category', SubCategoryController::class);
+    Route::resource('product-tag', ProductTagController::class);
 
     
     Route::resource('product', ProductContontroller::class);
