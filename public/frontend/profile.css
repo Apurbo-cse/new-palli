@@ -1,0 +1,169 @@
+
+a {
+  color: #18d26e;
+}
+
+a:hover {
+  color: #35e888;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+
+/*--------------------------------------------------------------
+# Sectionns General
+--------------------------------------------------------------*/
+
+
+sectionn.sectionn-show {
+  top: 100px;
+  bottom: auto;
+  opacity: 1;
+  padding-bottom: 45px;
+}
+
+sectionn .container {
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  sectionn {
+    top: 120px;
+  }
+  sectionn.sectionn-show {
+    top: 80px;
+  }
+}
+
+.sectionn-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+}
+
+.sectionn-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #4ceb95;
+  margin: 4px 10px;
+}
+
+.sectionn-title p {
+  margin: 0;
+  margin: -15px 0 15px 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: rgb(15, 4, 4);
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about-me .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #18d26e;
+}
+
+.about-me .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-me .content ul li {
+  padding-bottom: 10px;
+}
+
+.about-me .content ul i {
+  font-size: 20px;
+  padding-right: 2px;
+  color: #18d26e;
+}
+
+.about-me .content p:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+.counts {
+  padding: 70px 0 60px;
+}
+
+.counts .count-box {
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: rgba(3, 70, 90, 0.507);
+}
+
+.counts .count-box i {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  color: #18d26e;
+  border-radius: 50px;
+}
+
+.counts .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #fff;
+}
+
+.counts .count-box p {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Interests
+--------------------------------------------------------------*/
+.interests .icon-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: ease-in-out 0.3s;
+}
+
+.interests .icon-box i {
+  font-size: 32px;
+  padding-right: 10px;
+  line-height: 1;
+}
+
+.interests .icon-box h3 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 16px;
+  color: #fff;
+}
+
+.interests .icon-box:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
